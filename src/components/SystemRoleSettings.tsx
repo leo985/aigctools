@@ -25,7 +25,7 @@ export default (props: Props) => {
           <div>
             <div class="fi gap-1 op-50 dark:op-60">
               <IconEnv />
-              <span>System Role:</span>
+              <span>系统角色</span>
             </div>
             <div class="mt-1">
               { props.currentSystemRoleSettings() }
@@ -43,9 +43,9 @@ export default (props: Props) => {
         <div>
           <div class="fi gap-1 op-50 dark:op-60">
             <IconEnv />
-            <span>System Role:</span>
+            <span>系统角色:</span>
           </div>
-          <p class="my-2 leading-normal text-sm op-50 dark:op-60">Gently instruct the assistant and set the behavior of the assistant.</p>
+          <p class="my-2 leading-normal text-sm op-50 dark:op-60">指导私人助手并设定助手的行为.</p>
           <div>
             <textarea
               ref={systemInputRef!}
