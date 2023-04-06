@@ -25,7 +25,7 @@ export const post: APIRoute = async(context) => {
   if (messages.length > 6) {
     return new Response(JSON.stringify({
       error: {
-        message: '会话总回合数不能超过3,请尽量在3轮回答中完成提问',
+        message: '会话总回合数不能超过3,请尽量在3轮回答中完成提问，请点击刷子开启新会话',
       },
     }), { status: 400 })
   }
