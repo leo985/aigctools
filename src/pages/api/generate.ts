@@ -13,10 +13,19 @@ const sitePassword = import.meta.env.SITE_PASSWORD
 export const post: APIRoute = async(context) => {
   const body = await context.request.json()
   const { sign, time, messages, pass } = body
+  // eslint-disable-next-line no-console
+  console.log(messages.length)
   if (!messages) {
     return new Response(JSON.stringify({
       error: {
         message: 'No input text.',
+      },
+    }), { status: 400 })
+  }
+  if (messages.length > 6) {
+    return new Response(JSON.stringify({
+      error: {
+        message: '会话总回合数不能超过3,请尽量在3轮回答中完成提问',
       },
     }), { status: 400 })
   }
