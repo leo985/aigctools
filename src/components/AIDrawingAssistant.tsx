@@ -65,9 +65,10 @@ const AIDrawingAssistant = () => {
             onKeyDown={handleKeydown}
             autocomplete="off"
             autofocus
-            onInput={() => {
+            onInput={(e) => {
               inputRef.style.height = 'auto'
               inputRef.style.height = `${inputRef.scrollHeight}px`
+              setPrompt((e.target as HTMLTextAreaElement).value)
             }}
             rows="1"
             class="gen-textarea"
