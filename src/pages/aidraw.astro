@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro'
+import AIDrawingAssistant from '../components/AIDrawingAssistant.tsx'
+import 'katex/dist/katex.min.css'
+import 'highlight.js/styles/atom-one-dark.css'
+---
+
+<Layout title="AI绘画助手">
+  <main>
+    <AIDrawingAssistant client:load />
+  </main>
+</Layout>
+
+
+

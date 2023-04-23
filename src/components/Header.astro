@@ -2,9 +2,13 @@
 import Logo from './Logo.astro'
 import Themetoggle from './Themetoggle.astro'
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import { Link } from 'react-router-dom';
 ---
 
 <header>
+  初级版AI绘画功能已上线,欢迎试玩，点击<button class="link" onclick="window.location.href = '/aidraw'"><span class="gpt-title">AI绘画</span></button>
+  <br/>
+  <br/>
   <div class="fb">
     <Logo />
     <Themetoggle />
