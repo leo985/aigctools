@@ -15,7 +15,7 @@ const AIDrawingAssistant = () => {
       body: JSON.stringify({
         inputs: prompt(),
         options: {
-          wait_for_model: false,
+          wait_for_model: true,
         },
       }),
     })
